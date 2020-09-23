@@ -1,0 +1,328 @@
+/*Vars*/
+$color-bg: #FFFFFF;
+$color-btn: rgb(138, 5, 190);
+$color-btn-holver: #D57DFF;
+$font-size: 'Graphik-Regular','Gotham SSm A','Gotham SSm B','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+
+/*Mixins*/
+@mixin fontsize($size:24, $base:16) {
+    font-size: $size + px;
+    font-size: ($size/$base) * 1rem;
+}
+
+@mixin transition-timing-function($timing){
+    -webkit-transition-timing-function: $timing;
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin animation($animation){
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin transition-duration($duration){
+    -webkit-transition-duration: $duration;
+    -moz-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+body{
+    font-family: $font-size;
+}
+
+#btnLog{
+    display: inline-block;
+    padding: 30px 30px 30px 30px;  
+    font-family: $font-size; 
+    @include fontsize(20);
+    text-decoration: none;
+    outline: none;
+    color: $color-btn;
+    background-color: $color-bg;
+    -webkit-box-shadow: 0 0 0 -2px $color-btn, 0 0 0 -1px $color-btn;  
+    border: none;
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s;
+    &:hover, &:focus{
+        box-shadow: 0 0 0 2px $color-btn, 0 0 0 4px ($color-btn-holver, 5% opacity);
+        @include transition-timing-function(cubic-bezier(.6,4,.3,.8));
+        @include animation(gelatine .5s 1);
+    }
+    &:hover{
+        color: $color-btn-holver;
+    }
+}
+    
+
+#btnQSN{
+    display: inline-block;
+    padding: 30px 10px 30px 10px;  
+    font-family: $font-size; 
+    @include fontsize(20);
+    text-decoration: none;
+    outline: none;
+    color: $color-bg;
+    background-color: $color-btn;
+    -webkit-box-shadow: 0 0 0 -2px $color-btn, 0 0 0 -1px $color-btn;  
+    border: none;
+    -webkit-transition: -webkit-box-shadow .3s;
+    transition: box-shadow .3s;
+    &:hover, &:focus{
+        box-shadow: 0 0 0 2px $color-btn, 0 0 0 4px ($color-btn-holver, 5% opacity);
+        @include transition-timing-function(cubic-bezier(.6,4,.3,.8));
+        @include animation(gelatine .5s 1);
+    }
+    &:hover{
+        background-color: $color-btn-holver;
+    }
+}
+
+@keyframes gelatine {
+    from, to {
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+    25% {
+        -webkit-transform: scale(.9,1.1);
+        transform: scale(.9,1.1);
+    }
+    50% {
+        -webkit-transform: scale(1.1,.9);
+        transform: scale(1.1,.9);
+    }
+    75% {
+        -webkit-transform: scale(.95,1.05);
+        transform: scale(.95,1.05);
+    }
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    border: 1px black !important;
+    padding: 0px;
+    background-color: $color-bg !important;
+    box-shadow: 0 0 1px 0 black !important;
+    z-index: 1;
+}
+
+#icon{
+    padding: 0 0 0 30px;
+}
+
+.iconSpace{
+    padding: 10px;
+}
+
+#inicio{
+    color: $color-btn !important;
+    font-family: $font-size;
+    @include fontsize(18);
+    &:hover{
+        color: $color-btn-holver !important;
+    }
+}
+
+.fontBarra{
+    font-family: $font-size;
+    @include fontsize(18);
+    color: rgb(85, 82, 82) !important;
+    &:hover{
+        color: $color-btn-holver !important;
+    }
+}
+
+.row{
+    justify-content: center;
+    top: 2%;
+}
+
+.jumbotronCel{
+    position: relative;
+    width: 50%;
+    height: 800px;
+    justify-items: center;
+    background-image: url(../img/2020-05-26.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-bg;
+    padding: 170px 0px 0px 100px;
+    margin-top: 10px;
+    font-size: 48px;
+    z-index: 0;
+}
+
+.rowJumb2{
+    position: relative;
+    width: 100%;
+    height: 1000px !important;
+    overflow: hidden !important;   
+      
+}
+
+.rowJumb3{
+    background-color: $color-bg !important;
+}
+
+.jumbotron-fluid1{
+    height: 800px;
+    background-color: #F5F5F5;
+}
+
+.jumbotron-fluid2{
+    height: 800px;
+    background-color: $color-bg;
+}
+
+.jumbotron-fluid3{
+    height: 800px;
+    background-color: #530082;
+}
+
+.container{
+    margin-left: 500px; 
+    position: relative;
+    padding:  0px;
+    float: left;
+    overflow: hidden;
+    width: 500px;
+}
+
+#imgCelular{
+    margin-right: 800px;
+    position: relative;
+    float: right;
+    margin-bottom: 5%;
+    width: 550px;
+    height: 580px;
+   
+}
+
+#imgCelular2 {
+    margin-right: 800px;
+    position: relative;
+    float: right;
+    margin-bottom: 5%;
+    width: 500px;
+    height: 765px;
+  }
+
+#imgCelular3 {
+    margin-right: 800px;
+    position: relative;
+    float: right;
+    margin-bottom: 5%;
+    width: 403px;
+    height: 535px;
+  }
+
+.display-2{
+    font-family: $font-size;
+    font-size: 18px;
+    color: $color-btn;
+}
+
+.display-3{
+    position: relative;
+    padding: 0 0px 0px 0px;
+    font-size: 48px;
+    color: $color-btn;
+}
+
+.display-4{
+    font-size: 48px;
+}
+
+.display-33{
+    position: relative;
+    padding: 0 0px 0px 0px;
+    font-size: 48px;
+    color: $color-btn-holver;
+}
+
+.display-44{
+    font-size: 48px;
+    color: $color-bg;
+}
+
+.display-22{
+    font-size: 18px;
+    color: $color-bg;
+}
+
+.jumbotron-fluid4{
+    position: relative;
+    background-image: url(../img/nuPess.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    padding: 0;
+    top: 0;
+}
+
+.jumbotron-fluid5{
+    background-image: url(../img/nuPess2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    padding: 0;
+}
+
+.rowJumb4{
+    
+}
+
+.jumbotron-fluid6{
+    height: 800px;
+    background-image: url(../img/Asi.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron-fluid7{
+    height: 800px;
+    background-image: url(../img/b92133c0c99dfa5896ec98c9ef648690.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron-fluid8{
+    height: 800px;
+    background-image: url(../img/neve.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    background-color: #111111;
+}
+
+.container1{
+    display: grid;
+    margin-left: 5%;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    background-color: #111111;
+    color: $color-bg;
+}
+
+.containerDiv{
+    position: relative;
+    top: 50px;
+}
+
+.container2{
+    display: grid;
+    margin-left: 5%;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    background-color: #111111;
+    color: $color-bg;
+}
